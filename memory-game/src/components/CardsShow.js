@@ -1,7 +1,9 @@
 
-function CardShow() {
+function CardShow({ img }) {
     return (
-        <div></div>
+        <div>
+            <div><img src={img} alt='' height='250' width='250'></img></div>
+        </div>
     )
 }
 
