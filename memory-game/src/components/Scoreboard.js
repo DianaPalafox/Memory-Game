@@ -2,11 +2,11 @@
 function Scoreboard({ score, bestScore }) {
     return (
         <div className="scoreboard">
-            <div>
-                <h6>Score: {score}</h6>
+            <div className="score-container">
+                <h6>SCORE: {score}</h6>
             </div>
-            <div>
-                <h6>Best score: {bestScore}</h6>
+            <div className="score-container">
+                <h6>BEST SCORE: {bestScore}</h6>
             </div>
         </div>
     )

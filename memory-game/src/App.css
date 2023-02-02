@@ -1,11 +1,17 @@
 .App {
   text-align: center;
-  
 }
 
 *{
-  outline: 1px solid red;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 225, 230);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(124, 53, 125);
+}
 
+h1{
+  margin: 20px;
 }
 
 .cards{
@@ -21,6 +27,13 @@
   display: flex;
   justify-content: center;
   margin-bottom: 50px; 
+}
 
- 
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 60px; 
+  font-size: 1.5rem;
+  margin: 20px;
+
 }
