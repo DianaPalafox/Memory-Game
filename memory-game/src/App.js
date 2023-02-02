@@ -11,13 +11,18 @@ function App() {
     {id: 9, src:'./img/img9.jpg'}, {id: 10, src:'./img/img10.jpg'}, {id: 11, src:'./img/img11.jpg'}, {id: 12, src:'./img/img12.jpg'}
   ])
 
+  const handleClick = () => {
+    const shuffle = [...cards];
+    shuffle.sort((a, b) => 0.5 - Math.random());
+    setCards(shuffle)
+  }
 
   return (
     <div className="App">
       <h1>Memory Game</h1>
       <Information />
       <Scoreboard />
-      <Cards cards={cards}/>
+      <Cards cards={cards} onClick={handleClick}/>
     </div>
   );
 }
