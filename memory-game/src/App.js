@@ -11,18 +11,36 @@ function App() {
     {id: 9, src:'./img/img9.jpg'}, {id: 10, src:'./img/img10.jpg'}, {id: 11, src:'./img/img11.jpg'}, {id: 12, src:'./img/img12.jpg'}
   ])
 
-  const handleClick = () => {
+  const [score, setScore] = useState(0)
+  const [bestScore, setBestScore] = useState(0)
+  const [id, setId] = useState([])
+
+
+  const handleClick = (e) => {
     const shuffle = [...cards];
     shuffle.sort((a, b) => 0.5 - Math.random());
+    setId([...id, e.target.id])
     setCards(shuffle)
+
+    if(id.includes(e.target.id)) {
+      if(score > bestScore) {
+        setBestScore(score)
+      }
+      setScore(0)
+      setId([])
+    } else {
+      setScore(score + 1)
+    }
+    
   }
+
 
   return (
     <div className="App">
       <h1>Memory Game</h1>
       <Information />
-      <Scoreboard />
-      <Cards cards={cards} onClick={handleClick}/>
+      <Scoreboard score={score} bestScore={bestScore}/>
+      <Cards cards={cards} onClick={(e) => handleClick(e)}/>
     </div>
   );
 }

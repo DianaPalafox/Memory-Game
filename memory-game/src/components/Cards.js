@@ -2,7 +2,7 @@ import CardShow from "./CardsShow";
 
 function Cards({ cards, onClick }) {
     const renderedCards = cards.map((card) => {
-        return <CardShow key={card.id} card={card} img={card.src} onClick={onClick}/>
+        return <CardShow id={card.id} key={card.id} card={card} img={card.src} onClick={onClick}/>
     })
 
     return (

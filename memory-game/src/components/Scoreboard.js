@@ -1,12 +1,12 @@
 
-function Scoreboard() {
+function Scoreboard({ score, bestScore }) {
     return (
-        <div>
+        <div className="scoreboard">
             <div>
-                <h6>Score</h6>
+                <h6>Score: {score}</h6>
             </div>
             <div>
-                <h6>Best score</h6>
+                <h6>Best score: {bestScore}</h6>
             </div>
         </div>
     )
